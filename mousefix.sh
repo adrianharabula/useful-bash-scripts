@@ -19,6 +19,8 @@ Section "InputClass"
 	Driver "libinput"
 	MatchIsPointer "yes"
 	Option "AccelProfile" "flat"
+	# set mouse cursor speed, -1 is slowest, 1 is fastest
+	Option "AccelSpeed" "-0.95"
 EndSection
 EOF
 
