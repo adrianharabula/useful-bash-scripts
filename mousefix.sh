@@ -9,3 +9,8 @@ Section "InputClass"
     Option "AccelerationScheme" "none"
 EndSection
 EOF
+
+# Mouse pooling rate
+sudo tee /etc/modprobe.d/usbhid.conf <<EOF
+options usbhid mousepoll=1
+EOF
