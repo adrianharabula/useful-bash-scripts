@@ -24,11 +24,10 @@ EndSection
 Section "InputClass"
     Identifier "Slowdown g203 8000dpi mouse"
     Driver "libinput"
-    MatchProduct   "G203"
+    MatchProduct "G203"
     # set mouse cursor speed, -1 is slowest, 1 is fastest
     Option "AccelSpeed" "-0.95"
 EndSection
-
 EOF
 
 # Set mouse pooling rate
