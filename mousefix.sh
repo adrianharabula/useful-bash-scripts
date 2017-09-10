@@ -15,13 +15,20 @@
 # sudo apt install xserver-xorg-input-libinput-hwe-16.04
 sudo tee /usr/share/X11/xorg.conf.d/90-mouse-libinput.conf <<EOF
 Section "InputClass"
-	Identifier "My Mouse"
-	Driver "libinput"
-	MatchIsPointer "yes"
-	Option "AccelProfile" "flat"
-	# set mouse cursor speed, -1 is slowest, 1 is fastest
-	Option "AccelSpeed" "-0.95"
+    Identifier "Remove mouse acceleration"
+    Driver "libinput"
+    MatchIsPointer "yes"
+    Option "AccelProfile" "flat"
 EndSection
+
+Section "InputClass"
+    Identifier "Slowdown g203 8000dpi mouse"
+    Driver "libinput"
+    MatchProduct   "G203"
+    # set mouse cursor speed, -1 is slowest, 1 is fastest
+    Option "AccelSpeed" "-0.95"
+EndSection
+
 EOF
 
 # Set mouse pooling rate
